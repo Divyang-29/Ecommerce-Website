@@ -1,0 +1,177 @@
+.about {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* HERO */
+.about-hero {
+  margin-bottom: 60px;
+}
+
+.video-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-wrapper img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.play-btn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* CONTENT */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.feature {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.feature span {
+  color: #ff4d4f;
+  font-size: 18px;
+}
+
+.feature h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.about-right p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+/* STATS */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 30px;
+}
+
+.stat h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.stat span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-wrapper img {
+    height: 300px;
+  }
+}
+
+.about-intro {
+  max-width: 900px;
+  margin: 40px auto 60px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+}
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* ABOUT SECTIONS */
+.about-sections {
+  margin-bottom: 70px;
+}
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.about-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.about-left h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.arrow {
+  color: #ff4d4f;
+  font-size: 20px;
+  margin-top: 3px;
+}
+
+.about-right p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-row {
+    grid-template-columns: 1fr;
+  }
+}

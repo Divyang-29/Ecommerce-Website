@@ -1,0 +1,85 @@
+.dual-promo {
+  margin: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.promo-card {
+  position: relative;
+  background: #f7f7f7;
+  border-radius: 6px;
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.promo-card img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo-text {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  max-width: 60%;
+}
+
+.promo-tag {
+  font-size: 14px;
+  color: #555;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.promo-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.promo-text button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.promo-text button:hover {
+  background: #222;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .promo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-text {
+    max-width: 100%;
+  }
+
+  .promo-card img {
+    opacity: 0.35;
+  }
+}

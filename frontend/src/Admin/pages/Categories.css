@@ -1,0 +1,57 @@
+/* ===== PAGE WRAPPER ===== */
+.categories-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== TITLE ===== */
+.categories-page h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ===== ADD FORM ===== */
+.category-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.category-form input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.category-form input:focus {
+  outline: none;
+  border-color: #111;
+}
+
+.category-form button {
+  padding: 12px 18px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.category-form button:hover {
+  background: #000;
+}
+
+/* ===== GRID ===== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 20px;
+}

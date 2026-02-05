@@ -1,0 +1,36 @@
+/* Skeleton base */
+.skeleton {
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+/* Image placeholder */
+.skeleton-img {
+  width: 100%;
+  height: 260px;
+  background: #eee;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Text lines */
+.skeleton-line {
+  height: 14px;
+  background: #eee;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.skeleton-line.title {
+  width: 80%;
+}
+
+.skeleton-line.price {
+  width: 40%;
+}
+
+/* Animation */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.45; }
+  100% { opacity: 1; }
+}

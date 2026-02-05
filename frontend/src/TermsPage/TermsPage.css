@@ -1,0 +1,33 @@
+.terms-page {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.terms-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.terms-block {
+  margin-bottom: 40px;
+}
+
+.terms-block h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.terms-block p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .terms-page {
+    padding: 50px 15px;
+  }
+}

@@ -1,0 +1,96 @@
+.track-page {
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.track-box {
+  max-width: 700px;
+  margin: auto;
+  padding: 50px;
+  background: #fafafa;
+}
+
+.track-box h2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.track-box .line {
+  width: 40px;
+  height: 2px;
+  background: #000;
+}
+
+.track-box label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.track-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+}
+
+.track-box button {
+  padding: 14px 40px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 15px;
+}
+
+/* RESULT */
+.tracking-result {
+  margin-top: 40px;
+}
+
+.status {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left: 2px solid #ddd;
+  padding-left: 25px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.timeline-item .dot {
+  position: absolute;
+  left: -33px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.timeline-item .title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.timeline-item .desc {
+  font-size: 14px;
+  color: #555;
+}
+
+.timeline-item .date {
+  font-size: 12px;
+  color: #888;
+}

@@ -1,0 +1,79 @@
+.checkout-page {
+  background: #fff;
+  padding: 40px 20px;
+}
+
+.checkout-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.checkout-left input,
+.checkout-left select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.checkout-left .row {
+  display: flex;
+  gap: 15px;
+}
+
+.checkout-left .row input {
+  flex: 1;
+}
+
+.return {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* BOOTSTRAP-LIKE VALIDATION */
+.was-validated input:invalid,
+.was-validated select:invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  display: none;
+  font-size: 13px;
+  color: #dc3545;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.was-validated input:invalid + .invalid-feedback {
+  display: block;
+}
+
+/* RIGHT */
+.checkout-right {
+  background: #f9f9f9;
+  padding: 25px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.place-order {
+  width: 100%;
+  padding: 14px;
+  background: #000;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}

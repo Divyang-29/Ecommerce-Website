@@ -1,0 +1,34 @@
+.privacy-page {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.privacy-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* EACH SECTION */
+.privacy-block {
+  margin-bottom: 45px;
+}
+
+.privacy-block h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.privacy-block p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .privacy-page {
+    padding: 50px 15px;
+  }
+}

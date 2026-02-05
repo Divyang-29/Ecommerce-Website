@@ -1,0 +1,27 @@
+/* ===== ABOUT LIST ===== */
+.about-list {
+  max-width: 900px;
+  margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.about-card h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.about-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}

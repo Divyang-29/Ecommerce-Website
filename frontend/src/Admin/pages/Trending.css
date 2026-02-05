@@ -1,0 +1,14 @@
+.admin-form select {
+  grid-column: span 2;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+.admin-form select:focus {
+  border-color: #111;
+}

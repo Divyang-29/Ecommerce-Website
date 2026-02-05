@@ -1,0 +1,162 @@
+/* SECTION */
+.trending-products {
+  margin: 80px 0;
+}
+
+/* SAME WIDTH AS OTHER SECTIONS */
+.trending-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.trending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.trending-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.trending-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.trending-nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* GRID */
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.trending-card {
+  cursor: pointer;
+}
+
+.trending-image {
+  width: 100%;
+  height: 360px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.trending-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.trending-card:hover img {
+  transform: scale(1.05);
+}
+
+/* TITLE */
+.trending-title {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* PRICE */
+.trending-price {
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.trending-price .old {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+.trending-price .new {
+  font-weight: 700;
+  color: #000;
+}
+
+.trending-image {
+  position: relative;
+  overflow: hidden;
+}
+
+/* RIGHT ICONS */
+.trending-icons {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+}
+
+.trending-icons button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trending-icons button i {
+  font-size: 15px;
+}
+
+/* BOTTOM ACTION BAR */
+.trending-actions {
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background: #111;
+  transition: all 0.3s ease;
+}
+
+.trending-actions button {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.trending-actions button:hover {
+  background: #000;
+}
+
+/* HOVER EFFECT */
+.trending-card:hover .trending-icons {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.trending-card:hover .trending-actions {
+  bottom: 0;
+}

@@ -1,0 +1,28 @@
+.features {
+  background: #1c1c1c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Icon Circle */
+.icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}

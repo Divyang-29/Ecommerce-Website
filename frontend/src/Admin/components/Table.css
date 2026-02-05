@@ -1,0 +1,45 @@
+.admin-table-wrapper {
+  background: #fff;
+  padding: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+.admin-table th {
+  background: #f5f6fa;
+  font-weight: 600;
+}
+
+.admin-table td.empty {
+  text-align: center;
+  color: #888;
+}
+
+.admin-table .actions button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-table .edit {
+  background: #007bff;
+  color: #fff;
+}
+
+.admin-table .delete {
+  background: #dc3545;
+  color: #fff;
+}

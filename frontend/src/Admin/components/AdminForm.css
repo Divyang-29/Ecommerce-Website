@@ -1,0 +1,45 @@
+.admin-form {
+  background: #fff;
+  padding: 30px;
+  max-width: 700px;
+}
+
+.admin-form h2 {
+  margin-bottom: 20px;
+}
+
+.admin-form label {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.admin-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.admin-form button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+
+.admin-form button.secondary {
+  background: #ccc;
+  color: #000;
+  margin-left: 10px;
+}

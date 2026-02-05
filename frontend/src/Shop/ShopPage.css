@@ -1,0 +1,280 @@
+.shop-page {
+  padding: 60px 0 100px;
+  background: #fff;
+}
+
+.shop-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.shop-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-right: 1px solid #eee;
+  padding-right: 24px;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.filter-header button {
+  border: none;
+  background: #111;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.filter-block button {
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 0;
+  color: #333;
+}
+
+.filter-block button.active {
+  font-weight: 700;
+  color: #000;
+}
+
+.filter-block label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.filter-block label input {
+  margin-right: 8px;
+}
+
+.filter-block .count {
+  margin-left: auto;
+  font-size: 12px;
+  color: #777;
+}
+
+.filter-block label .count {
+  margin-left: auto;
+}
+
+.filter-empty {
+  font-size: 13px;
+  color: #888;
+}
+
+.range-inputs {
+  display: grid;
+  gap: 8px;
+}
+
+.range-inputs input[type="range"] {
+  width: 100%;
+}
+
+.price-range {
+  font-size: 13px;
+  color: #333;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  margin-right: 8px;
+  background: #eee;
+  display: inline-block;
+}
+
+.color-dot[data-color="black"] {
+  background: #000;
+}
+
+.color-dot[data-color="white"] {
+  background: #fff;
+}
+
+.color-dot[data-color="blue"] {
+  background: #2f5bff;
+}
+
+.color-dot[data-color="pink"] {
+  background: #ff5ac8;
+}
+
+.color-dot[data-color="gray"] {
+  background: #b8b8b8;
+}
+
+.color-dot[data-color="grey"] {
+  background: #b8b8b8;
+}
+
+.color-dot[data-color="brown"] {
+  background: #7a4b2a;
+}
+
+.color-dot[data-color="cream"] {
+  background: #f2e9d8;
+}
+
+.shop-results {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.shop-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+}
+
+.shop-toolbar select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.shop-meta {
+  font-size: 14px;
+  color: #333;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.shop-card {
+  cursor: pointer;
+}
+
+.shop-card h3 {
+  margin: 14px 0 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.shop-image {
+  position: relative;
+  background: #f4f4f4;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.shop-image img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.shop-card:hover img {
+  transform: scale(1.05);
+}
+
+.badge.sale {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #ff0000;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.badge.stock {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #333;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 11px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+.new-price {
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .shop-container {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .shop-container {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-filters {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,23 @@
+.admin-sidebar {
+  width: 240px;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.admin-sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.admin-sidebar a {
+  display: block;
+  padding: 10px;
+  color: #bbb;
+  text-decoration: none;
+}
+
+.admin-sidebar a.active,
+.admin-sidebar a:hover {
+  background: #000;
+  color: #fff;
+}

@@ -1,0 +1,183 @@
+/* FULL SCREEN OVERLAY */
+.auth-overlay {
+  position: fixed;           /* 👈 THIS IS THE KEY */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;             /* 👈 ABOVE NAVBAR */
+}
+
+/* MODAL BOX */
+.auth-box {
+  background: #fff;
+  width: 420px;
+  max-width: 90%;
+  padding: 30px;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* CLOSE BUTTON */
+.auth-box .close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* INPUTS */
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* LOGIN BUTTON */
+.auth-box .primary {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-footer {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.register-link {
+  margin-left: 6px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+}
+
+.register-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.register-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* PAGE WRAPPER (REGISTER PAGE) */
+.auth-page {
+  min-height: calc(100vh - 160px); /* navbar + footer space */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px;
+  background: #fff;
+}
+
+/* FORM BOX */
+.auth-box {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 40px;
+  border: 1px solid #eee;
+}
+
+/* TITLE */
+.auth-box h2 {
+  margin-bottom: 24px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* INPUTS */
+.auth-box input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #e5e5e5;
+  font-size: 14px;
+}
+
+.auth-box input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+/* PRIMARY BUTTON */
+.auth-box .primary {
+  width: 100%;
+  padding: 14px;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auth-box .primary:hover {
+  opacity: 0.9;
+}
+
+/* SWITCH LOGIN/REGISTER */
+.switch {
+  margin-top: 18px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.switch span {
+  margin-left: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+}
+
+.switch span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.switch span:hover::after {
+  transform: scaleX(1);
+}
