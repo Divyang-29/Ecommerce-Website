@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import LoginModal from "../Auth/LoginModal";
 import SearchDrawer from "../SearchDrawer/SearchDrawer";
 import "./Navbar.css";
+import Logo from "./../assets/shopnest.png";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -54,9 +55,12 @@ export default function Navbar() {
     }
 
     try {
-      const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/cart", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await fetch(
+        "https://ecommerce-website-trfk.onrender.com/api/cart",
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        },
+      );
 
       const data = await res.json();
       const count = (data.items || []).reduce(
@@ -78,9 +82,12 @@ export default function Navbar() {
     }
 
     try {
-      const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/wishlist", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await fetch(
+        "https://ecommerce-website-trfk.onrender.com/api/wishlist",
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        },
+      );
 
       const data = await res.json();
       setWishlistCount(data.length || 0);
@@ -123,8 +130,7 @@ export default function Navbar() {
       {/* NAVBAR */}
       <nav className="navbar">
         <div className="logo" onClick={() => navigate("/")}>
-          <span className="logo-icon">◐</span>
-          <span className="logo-text">Torado</span>
+          <img src={Logo} alt="ShopNest Logo" className="logo-img" />
         </div>
 
         <ul className="menu">

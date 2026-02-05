@@ -30,28 +30,40 @@
 
 /* ================= NAVBAR ================= */
 .navbar {
+  height: 82px;
+  padding: 0 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
   background: #fff;
   border-bottom: 1px solid #eee;
   position: relative;
   z-index: 999;
 }
 
+
+/* ================= LOGO ================= */
 /* ================= LOGO ================= */
 .logo {
   display: flex;
   align-items: center;
-  font-size: 22px;
-  font-weight: bold;
   cursor: pointer;
 }
 
-.logo-icon {
-  font-size: 28px;
-  margin-right: 6px;
+/* LOGO IMAGE */
+.logo-img {
+  height: 84px; /* desktop size */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* subtle hover (premium feel) */
+.logo:hover .logo-img {
+  opacity: 0.85;
+  transform: translateY(-1px);
 }
 
 /* ================= MENU ================= */
@@ -65,8 +77,8 @@
   cursor: pointer;
   font-weight: 500;
   position: relative;
-   display: flex;
-  align-items: center; 
+  display: flex;
+  align-items: center;
 }
 
 .menu li.active {
@@ -96,7 +108,9 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   transform: translateY(5px);
   z-index: 1000;
 }

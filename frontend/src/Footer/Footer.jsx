@@ -9,6 +9,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
 } from "react-icons/fa";
+import Logo from "./../assets/shopnest.png";
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -34,7 +35,9 @@ export default function Footer() {
         <div className="container footer-grid">
           {/* ABOUT */}
           <div className="footer-col">
-            <h2 className="logo">Torado</h2>
+            <div className="logo" onClick={() => navigate("/")}>
+              <img src={Logo} alt="ShopNest Logo" className="logo-img" />
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur. Risus lacus neque velit
               augue integer vel id nunc blandit.
@@ -52,10 +55,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
-              <li onClick={(()=>navigate("/"))}>Home</li>
-              <li onClick={()=>navigate("/about")}>About Us</li>
+              <li onClick={() => navigate("/")}>Home</li>
+              <li onClick={() => navigate("/about")}>About Us</li>
               <li>Delivery</li>
-              <li onClick={()=>navigate("/contact")}>Contact Us</li>
+              <li onClick={() => navigate("/contact")}>Contact Us</li>
             </ul>
           </div>
 
@@ -66,7 +69,7 @@ export default function Footer() {
               <li>Refund Policy</li>
               <li>Shipping FAQ</li>
               <li>My Account</li>
-              <li onClick={()=>navigate("/terms")}>Terms & Conditions</li>
+              <li onClick={() => navigate("/terms")}>Terms & Conditions</li>
             </ul>
           </div>
 
@@ -75,9 +78,9 @@ export default function Footer() {
             <h4>Useful Links</h4>
             <ul>
               <li>My Account</li>
-              <li onClick={()=>navigate("/wishlist")}>My Wishlists</li>
-              <li onClick={()=>navigate("/checkout")}>Checkout</li>
-              <li onClick={()=>navigate("/blogs")}>Latest News</li>
+              <li onClick={() => navigate("/wishlist")}>My Wishlists</li>
+              <li onClick={() => navigate("/checkout")}>Checkout</li>
+              <li onClick={() => navigate("/blogs")}>Latest News</li>
             </ul>
           </div>
 
