@@ -34,6 +34,7 @@ import Terms from "./Admin/pages/Terms";
 import Testimonials from "./Admin/pages/Testimonials";
 import Trending from "./Admin/pages/Trending";
 import AdminShipment from "./Admin/pages/AdminShipment";
+import LoginModal from "./Auth/LoginModal";
 
 function App() {
   const location = useLocation();
@@ -73,6 +74,8 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/search" element={<SearchDrawer />} />
         <Route path="/blogs" element={<BlogSection />} />
+        <Route path="/login" element={<LoginModal/>}/>
+        <Route path="/register" element={<Register/>}/>
 
         {/* ADMIN ROUTES */}
         <Route
@@ -95,6 +98,7 @@ function App() {
           <Route path="testimonials" element={<Testimonials />} />
           <Route path="trending" element={<Trending />} />
           <Route path="shipment" element={<AdminShipment/>}/>
+          
         </Route>
       </Routes>
 
