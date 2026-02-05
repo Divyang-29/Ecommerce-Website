@@ -7,7 +7,7 @@ export default function AboutUs() {
   const [sections, setSections] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/about")
+    fetch("https://ecommerce-website-trfk.onrender.com/api/about")
       .then((res) => res.json())
       .then(setSections)
       .catch(console.error);

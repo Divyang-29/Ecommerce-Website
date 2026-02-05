@@ -6,7 +6,7 @@ export default function TestimonialSlider() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/testimonials")
+    fetch("https://ecommerce-website-trfk.onrender.com/api/testimonials")
       .then(res => res.json())
       .then(data => setTestimonials(data))
       .catch(err => console.error(err));

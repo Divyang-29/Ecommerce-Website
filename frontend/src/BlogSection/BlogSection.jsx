@@ -5,7 +5,7 @@ export default function BlogSection({ limit }) {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/blogs")
+    fetch("https://ecommerce-website-trfk.onrender.com/api/blogs")
       .then((res) => res.json())
       .then((data) => {
         // ✅ LIMIT ONLY IF PROVIDED

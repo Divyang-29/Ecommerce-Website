@@ -12,7 +12,7 @@ export default function About() {
   const token = localStorage.getItem("token");
 
   const loadSections = async () => {
-    const res = await fetch("http://localhost:8080/api/about");
+    const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/about");
     setSections(await res.json());
   };
 
@@ -27,7 +27,7 @@ export default function About() {
   const addSection = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:8080/api/about", {
+    const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/about", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

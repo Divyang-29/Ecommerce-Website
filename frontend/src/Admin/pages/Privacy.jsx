@@ -12,7 +12,7 @@ export default function Privacy() {
   const token = localStorage.getItem("token");
 
   const loadItems = async () => {
-    const res = await fetch("http://localhost:8080/api/privacy");
+    const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/privacy");
     setItems(await res.json());
   };
 
@@ -27,7 +27,7 @@ export default function Privacy() {
   const addItem = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:8080/api/privacy", {
+    await fetch("https://ecommerce-website-trfk.onrender.com/api/privacy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

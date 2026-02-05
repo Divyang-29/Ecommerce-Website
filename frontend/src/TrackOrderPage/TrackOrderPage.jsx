@@ -20,7 +20,7 @@ export default function TrackOrderPage() {
 
     try {
       const res = await fetch(
-        `http://localhost:8080/api/shipment/track/${trackingId}`,
+        `https://ecommerce-website-trfk.onrender.com/api/shipment/track/${trackingId}`,
       );
 
       if (!res.ok) {

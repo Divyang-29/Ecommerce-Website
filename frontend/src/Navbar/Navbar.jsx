@@ -54,7 +54,7 @@ export default function Navbar() {
     }
 
     try {
-      const res = await fetch("http://localhost:8080/api/cart", {
+      const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -78,7 +78,7 @@ export default function Navbar() {
     }
 
     try {
-      const res = await fetch("http://localhost:8080/api/wishlist", {
+      const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/wishlist", {
         headers: { Authorization: `Bearer ${token}` },
       });
 

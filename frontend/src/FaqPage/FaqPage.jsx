@@ -9,7 +9,7 @@ export default function FaqPage() {
 
   /* FETCH CATEGORIES */
   useEffect(() => {
-    fetch("http://localhost:8080/api/faq-categories")
+    fetch("https://ecommerce-website-trfk.onrender.com/api/faq-categories")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
@@ -22,7 +22,7 @@ export default function FaqPage() {
   useEffect(() => {
     if (!activeCategory) return;
 
-    fetch(`http://localhost:8080/api/faqs/${activeCategory.id}`)
+    fetch(`https://ecommerce-website-trfk.onrender.com/api/faqs/${activeCategory.id}`)
       .then((res) => res.json())
       .then((data) => {
         setFaqs(data);

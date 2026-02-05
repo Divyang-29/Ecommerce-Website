@@ -8,14 +8,14 @@ export default function Categories() {
   const token = localStorage.getItem("token");
 
   const load = async () => {
-    const res = await fetch("http://localhost:8080/api/categories");
+    const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/categories");
     setCategories(await res.json());
   };
 
   const add = async () => {
     if (!name.trim()) return;
 
-    await fetch("http://localhost:8080/api/categories", {
+    await fetch("https://ecommerce-website-trfk.onrender.com/api/categories", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

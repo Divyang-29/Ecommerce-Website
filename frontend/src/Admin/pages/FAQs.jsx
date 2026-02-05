@@ -17,7 +17,7 @@ export default function FAQs() {
 
   /* ===== LOAD FAQ CATEGORIES ===== */
   useEffect(() => {
-    fetch("http://localhost:8080/api/faq-categories")
+    fetch("https://ecommerce-website-trfk.onrender.com/api/faq-categories")
       .then((res) => res.json())
       .then(setCategories)
       .catch(console.error);
@@ -30,7 +30,7 @@ export default function FAQs() {
       return;
     }
 
-    fetch(`http://localhost:8080/api/faqs/${selectedCategory}`)
+    fetch(`https://ecommerce-website-trfk.onrender.com/api/faqs/${selectedCategory}`)
       .then((res) => res.json())
       .then(setFaqs)
       .catch(console.error);
@@ -49,7 +49,7 @@ export default function FAQs() {
       return;
     }
 
-    await fetch("http://localhost:8080/api/faqs", {
+    await fetch("https://ecommerce-website-trfk.onrender.com/api/faqs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ export default function FAQs() {
     setForm({ question: "", answer: "" });
 
     // reload only this category
-    fetch(`http://localhost:8080/api/faqs/${selectedCategory}`)
+    fetch(`https://ecommerce-website-trfk.onrender.com/api/faqs/${selectedCategory}`)
       .then((res) => res.json())
       .then(setFaqs);
   };

@@ -5,7 +5,7 @@ export default function TrendingProducts() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/trending")
+    fetch("https://ecommerce-website-trfk.onrender.com/api/trending")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

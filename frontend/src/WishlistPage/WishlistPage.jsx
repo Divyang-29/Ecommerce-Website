@@ -19,7 +19,7 @@ export default function WishlistPage() {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:8080/api/wishlist", {
+      const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/wishlist", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -33,7 +33,7 @@ export default function WishlistPage() {
   };
 
   const remove = async (id) => {
-    await fetch(`http://localhost:8080/api/wishlist/${id}`, {
+    await fetch(`https://ecommerce-website-trfk.onrender.com/api/wishlist/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     });

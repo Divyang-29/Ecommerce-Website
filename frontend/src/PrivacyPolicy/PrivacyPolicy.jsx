@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
   const [sections, setSections] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/privacy")
+    fetch("https://ecommerce-website-trfk.onrender.com/api/privacy")
       .then((res) => res.json())
       .then((data) => setSections(data))
       .catch((err) => console.error(err));

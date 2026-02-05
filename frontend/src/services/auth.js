@@ -1,4 +1,4 @@
-const API = "http://localhost:8080/api";
+const API = "https://ecommerce-website-trfk.onrender.com/api";
 
 export const login = async (email, password) => {
   const res = await fetch(`${API}/auth/login`, {

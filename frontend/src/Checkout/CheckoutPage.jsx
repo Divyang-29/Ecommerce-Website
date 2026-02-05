@@ -26,7 +26,7 @@ export default function CheckoutPage() {
   useEffect(() => {
     if (!token) navigate("/");
 
-    fetch("http://localhost:8080/api/cart", {
+    fetch("https://ecommerce-website-trfk.onrender.com/api/cart", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -56,7 +56,7 @@ export default function CheckoutPage() {
 
     try {
       const res = await fetch(
-        "http://localhost:8080/api/orders/checkout",
+        "https://ecommerce-website-trfk.onrender.com/api/orders/checkout",
         {
           method: "POST",
           headers: {

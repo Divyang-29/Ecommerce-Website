@@ -11,7 +11,7 @@ export default function CartPage() {
   /* ---------- LOAD CART ---------- */
   const fetchCart = async () => {
     try {
-      const res = await fetch("http://localhost:8080/api/cart", {
+      const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -38,7 +38,7 @@ export default function CartPage() {
     );
 
     // backend update (no refetch)
-    await fetch(`http://localhost:8080/api/cart/items/${id}`, {
+    await fetch(`https://ecommerce-website-trfk.onrender.com/api/cart/items/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export default function CartPage() {
   const removeItem = async (id) => {
     setItems((prev) => prev.filter((i) => i.id !== id));
 
-    await fetch(`http://localhost:8080/api/cart/items/${id}`, {
+    await fetch(`https://ecommerce-website-trfk.onrender.com/api/cart/items/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     });

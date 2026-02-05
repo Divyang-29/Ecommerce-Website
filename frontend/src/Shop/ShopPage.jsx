@@ -34,12 +34,12 @@ export default function ShopPage() {
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        const res = await fetch("http://localhost:8080/api/products");
+        const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/products");
         const data = await res.json();
 
         const detailed = await Promise.all(
           data.map(async (p) => {
-            const r = await fetch(`http://localhost:8080/api/products/${p.id}`);
+            const r = await fetch(`https://ecommerce-website-trfk.onrender.com/api/products/${p.id}`);
             const d = await r.json();
 
             const totalStock = (d.sizes || []).reduce(

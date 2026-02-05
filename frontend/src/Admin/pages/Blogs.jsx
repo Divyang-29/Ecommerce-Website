@@ -16,7 +16,7 @@ export default function Blogs() {
   const token = localStorage.getItem("token");
 
   const loadBlogs = async () => {
-    const res = await fetch("http://localhost:8080/api/blogs");
+    const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/blogs");
     setBlogs(await res.json());
   };
 
@@ -31,7 +31,7 @@ export default function Blogs() {
   const addBlog = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:8080/api/blogs", {
+    await fetch("https://ecommerce-website-trfk.onrender.com/api/blogs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

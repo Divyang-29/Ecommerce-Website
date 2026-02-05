@@ -10,7 +10,7 @@ export default function SearchDrawer({ onClose }) {
 
   /* FETCH ALL PRODUCTS ONCE */
   useEffect(() => {
-    fetch("http://localhost:8080/api/products")
+    fetch("https://ecommerce-website-trfk.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch(console.error);

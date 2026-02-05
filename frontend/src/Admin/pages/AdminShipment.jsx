@@ -14,7 +14,7 @@ export default function AdminShipment() {
 
   /* ================= FETCH ORDERS ================= */
   useEffect(() => {
-    fetch("http://localhost:8080/api/orders", {
+    fetch("https://ecommerce-website-trfk.onrender.com/api/orders", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -38,7 +38,7 @@ export default function AdminShipment() {
 
     try {
       const res = await fetch(
-        `http://localhost:8080/api/admin/shipment/${orderId}`,
+        `https://ecommerce-website-trfk.onrender.com/api/admin/shipment/${orderId}`,
         {
           method: "PUT",
           headers: {

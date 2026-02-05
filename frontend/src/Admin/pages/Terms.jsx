@@ -12,7 +12,7 @@ export default function Terms() {
   const token = localStorage.getItem("token");
 
   const loadTerms = async () => {
-    const res = await fetch("http://localhost:8080/api/terms");
+    const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/terms");
     setTerms(await res.json());
   };
 
@@ -27,7 +27,7 @@ export default function Terms() {
   const addTerm = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:8080/api/terms", {
+    await fetch("https://ecommerce-website-trfk.onrender.com/api/terms", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

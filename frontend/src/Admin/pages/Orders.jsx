@@ -6,7 +6,7 @@ export default function Orders() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/orders", {
+    fetch("https://ecommerce-website-trfk.onrender.com/api/orders", {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     })
       .then(res => res.json())

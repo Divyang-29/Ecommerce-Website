@@ -12,13 +12,13 @@ export default function Trending() {
 
   /* ===== LOAD TRENDING ===== */
   const loadTrending = async () => {
-    const res = await fetch("http://localhost:8080/api/trending");
+    const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/trending");
     setTrending(await res.json());
   };
 
   /* ===== LOAD PRODUCTS ===== */
   const loadProducts = async () => {
-    const res = await fetch("http://localhost:8080/api/products");
+    const res = await fetch("https://ecommerce-website-trfk.onrender.com/api/products");
     setProducts(await res.json());
   };
 
@@ -33,7 +33,7 @@ export default function Trending() {
     if (!selectedProduct) return;
 
     await fetch(
-      `http://localhost:8080/api/trending/${selectedProduct}`,
+      `https://ecommerce-website-trfk.onrender.com/api/trending/${selectedProduct}`,
       {
         method: "POST",
         headers: {

@@ -5,7 +5,7 @@ export default function TermsPage() {
   const [terms, setTerms] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/terms")
+    fetch("https://ecommerce-website-trfk.onrender.com/api/terms")
       .then((res) => res.json())
       .then((data) => setTerms(data))
       .catch((err) => console.error(err));

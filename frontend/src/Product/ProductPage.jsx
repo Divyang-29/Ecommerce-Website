@@ -24,7 +24,7 @@ export default function ProductPage() {
 
   /* ---------- FETCH PRODUCT ---------- */
   useEffect(() => {
-    fetch(`http://localhost:8080/api/products/${id}`)
+    fetch(`https://ecommerce-website-trfk.onrender.com/api/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -43,7 +43,7 @@ export default function ProductPage() {
 
   /* ---------- FETCH REVIEWS ---------- */
   useEffect(() => {
-    fetch(`http://localhost:8080/api/reviews/${id}`)
+    fetch(`https://ecommerce-website-trfk.onrender.com/api/reviews/${id}`)
       .then((res) => res.json())
       .then(setReviews)
       .catch(console.error);
@@ -53,7 +53,7 @@ export default function ProductPage() {
   useEffect(() => {
     if (!token || !product) return;
 
-    fetch("http://localhost:8080/api/wishlist", {
+    fetch("https://ecommerce-website-trfk.onrender.com/api/wishlist", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -76,7 +76,7 @@ export default function ProductPage() {
       return;
     }
 
-    await fetch("http://localhost:8080/api/cart/items", {
+    await fetch("https://ecommerce-website-trfk.onrender.com/api/cart/items", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -103,13 +103,13 @@ export default function ProductPage() {
     }
 
     if (inWishlist) {
-      await fetch(`http://localhost:8080/api/wishlist/${product.id}`, {
+      await fetch(`https://ecommerce-website-trfk.onrender.com/api/wishlist/${product.id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
       setInWishlist(false);
     } else {
-      await fetch("http://localhost:8080/api/wishlist", {
+      await fetch("https://ecommerce-website-trfk.onrender.com/api/wishlist", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -134,7 +134,7 @@ export default function ProductPage() {
 
     if (!reviewText.trim()) return alert("Review text required");
 
-    await fetch(`http://localhost:8080/api/reviews/${id}`, {
+    await fetch(`https://ecommerce-website-trfk.onrender.com/api/reviews/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -146,13 +146,13 @@ export default function ProductPage() {
     setReviewText("");
     setRating(5);
 
-    const res = await fetch(`http://localhost:8080/api/reviews/${id}`);
+    const res = await fetch(`https://ecommerce-website-trfk.onrender.com/api/reviews/${id}`);
     setReviews(await res.json());
   };
 
   /* ---------- DELETE REVIEW ---------- */
   const deleteReview = async (reviewId) => {
-    await fetch(`http://localhost:8080/api/reviews/${reviewId}`, {
+    await fetch(`https://ecommerce-website-trfk.onrender.com/api/reviews/${reviewId}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     });
